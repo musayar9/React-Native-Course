@@ -1,7 +1,7 @@
-import { Button, StyleSheet, Text, TextInput, View } from "react-native";
+import { Button, Modal, StyleSheet, Text, TextInput, View } from "react-native";
 import React, { useState } from "react";
 
-const GoalInput = ({ addGoalHandler }) => {
+const GoalInput = ({ addGoalHandler, visible }) => {
   const [enteredGoalsText, setEnteredGoalText] = useState("");
 
   const goalInputHandler = (enteredText) => {
@@ -9,27 +9,29 @@ const GoalInput = ({ addGoalHandler }) => {
   };
 
   return (
-    <View style={styles.formArea}>
-      <TextInput
-        style={{
-          width: "70%",
-          borderWidth: 2,
-          borderColor: "#e2e8f0",
-          borderRadius: 8,
-          paddingHorizontal: 12,
-          paddingVertical: 5,
-        }}
-        placeholder="Your course goal"
-        onChangeText={goalInputHandler}
-        value={enteredGoalsText}
-      />
-      <Button
-        title="Add Goal"
-        onPress={() => {
-          addGoalHandler(enteredGoalsText), setEnteredGoalText("");
-        }}
-      />
-    </View>
+    <Modal visible={visible} animationType="slide">
+      <View style={styles.formArea}>
+        <TextInput
+          style={{
+            width: "70%",
+            borderWidth: 2,
+            borderColor: "#e2e8f0",
+            borderRadius: 8,
+            paddingHorizontal: 12,
+            paddingVertical: 5,
+          }}
+          placeholder="Your course goal"
+          onChangeText={goalInputHandler}
+          value={enteredGoalsText}
+        />
+        <Button
+          title="Add Goal"
+          onPress={() => {
+            addGoalHandler(enteredGoalsText), setEnteredGoalText("");
+          }}
+        />
+      </View>
+    </Modal>
   );
 };
 

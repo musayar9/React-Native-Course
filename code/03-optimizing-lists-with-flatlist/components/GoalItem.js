@@ -27,16 +27,20 @@ const GoalItem = ({ item, onDeleteItem }) => {
       </Text>
 
       <Pressable
-        onPress={() => onDeleteItem(item.item.id)}
-        style={{
-          backgroundColor: "red",
-          borderRadius: 8,
-          paddingVertical: 5,
-          paddingHorizontal: 10,
-          color: "white",
-        }}
+        // android_ripple={{ color: "orange" }}
+        // onPress={() => onDeleteItem(item.item.id)}
+        onPress={onDeleteItem.bind(this, item.item.id)}
+        style={({ pressed }) => [
+          { opacity: pressed ? 0.5 : 1 },
+          {
+            backgroundColor: "red",
+            borderRadius: 8,
+            paddingVertical: 5,
+            paddingHorizontal: 10,
+          },
+        ]}
       >
-        <Text>Sil</Text>
+        <Text style={{ color: "white" }}>Delete</Text>
       </Pressable>
     </View>
   );
