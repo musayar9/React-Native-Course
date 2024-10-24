@@ -2,6 +2,8 @@ import {Pressable, StyleSheet, Text, View} from "react-native";
 import React from "react";
 
 const GoalItem = ({item, onDeleteItem}) => {
+
+    console.log("test çalışması")
     return (
         <View
             style={{
@@ -21,6 +23,7 @@ const GoalItem = ({item, onDeleteItem}) => {
                     fontWeight: "600",
                     fontSize: 18,
                     fontStyle: "italic",
+                    color: "white"
                 }}
             >
                 {item.item.text} - {item.item.id}

@@ -60,7 +60,7 @@ export default function App() {
                         ListHeaderComponent={
                             courseGoals.length > 0 ? ( // Eğer courseGoals dizisi boş değilse
                                 <View style={{marginTop: 20, paddingLeft: 10}}>
-                                    <Text style={{fontSize: 24, fontWeight: "bold"}}>
+                                    <Text style={{fontSize: 24, fontWeight: "bold", color: "white"}}>
                                         Todo List
                                     </Text>
                                 </View>
