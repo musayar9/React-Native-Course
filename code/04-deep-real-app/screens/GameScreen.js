@@ -1,5 +1,12 @@
-import { Alert, FlatList, StyleSheet, Text, View } from "react-native";
-import Title from "../components/ui/Title";
+import {
+  Alert,
+  FlatList,
+  StyleSheet,
+  Text,
+  useWindowDimensions,
+  View,
+} from "react-native";
+import Title from "../components/ui/Title.android";
 import { useEffect, useState } from "react";
 import NumberContainer from "../components/game/NumberContainer";
 import PrimaryButton from "../components/ui/PrimaryButton";
@@ -23,7 +30,7 @@ const GameScreen = ({ userNumber, onGameOver }) => {
   const initialGuess = generateRandomBetween(1, 100, userNumber);
   const [currentGuess, setCurrentGuess] = useState(initialGuess);
   const [guessRounds, setGuessRounds] = useState([]);
-
+  const { width, height } = useWindowDimensions();
   useEffect(() => {
     if (currentGuess === userNumber) {
       console.log("Game Over");
@@ -61,13 +68,11 @@ const GameScreen = ({ userNumber, onGameOver }) => {
     setCurrentGuess(newRndNumber);
     setGuessRounds((prevGuessRounds) => [newRndNumber, ...prevGuessRounds]);
   };
-  console.log(currentGuess, "currentGuess");
+
   const guessRoundsListLength = guessRounds.length;
-  console.log("guess round length", guessRoundsListLength);
-  return (
-    <View style={styles.screen}>
-      <Title>Opponent's Guess</Title>
-      {/*    Guess*/}
+
+  let content = (
+    <>
       <NumberContainer>{currentGuess}</NumberContainer>
 
       <Card>
@@ -93,7 +98,35 @@ const GameScreen = ({ userNumber, onGameOver }) => {
                 */}
         </View>
       </Card>
+    </>
+  );
 
+  if (width > 500) {
+    content = (
+      <>
+        <View style={styles.buttonsContainerWide}>
+          <View style={styles.buttonContainer}>
+            <PrimaryButton onPress={() => nextGuessHandler("lower")}>
+              <AntDesign name="minus" size={24} color="white" />
+            </PrimaryButton>
+          </View>
+          <NumberContainer>{currentGuess}</NumberContainer>
+          <View style={styles.buttonContainer}>
+            <PrimaryButton onPress={() => nextGuessHandler("greater")}>
+              <AntDesign name="plus" size={24} color="white" />
+            </PrimaryButton>
+          </View>
+        </View>
+      </>
+    );
+  }
+
+  return (
+    <View style={styles.screen}>
+      <Title>Opponent's Guess</Title>
+      {/*    Guess*/}
+
+      {content}
       <View style={styles.listContainer}>
         {/* {guessRounds?.map((item, index) => (
           <View
@@ -131,6 +164,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 24,
     marginTop: 24,
+    alignItems: "center",
   },
   title: {
     fontSize: 24,
@@ -152,6 +186,10 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     flex: 1,
-    padding:16
+    padding: 16,
+  },
+  buttonsContainerWide: {
+    flexDirection: "row",
+    alignItems: "center",
   },
 });
