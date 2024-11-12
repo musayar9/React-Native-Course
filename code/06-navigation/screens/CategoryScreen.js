@@ -4,9 +4,11 @@ import { CATEGORIES } from "../data/dummy-data";
 import CategoryGridTitle from "../components/CategoryGridTitle";
 
 const CategoryScreen = ({ navigation }) => {
-  const RenderCategoryItem = ({ title, color }) => {
+  const RenderCategoryItem = ({ title, color, id }) => {
     const pressHandler = () => {
-      navigation.navigate("MealsOverview");
+      navigation.navigate("MealsOverview", {
+      categoryId:id
+      });
     };
 
     return (
@@ -20,7 +22,7 @@ const CategoryScreen = ({ navigation }) => {
         data={CATEGORIES}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <RenderCategoryItem title={item.title} color={item.color} />
+          <RenderCategoryItem title={item.title} color={item.color} id={item.id} />
         )}
         numColumns={2}
       />
