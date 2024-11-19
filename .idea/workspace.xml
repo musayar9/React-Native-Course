@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46213734-957c-4a4a-9a9a-825a17417435" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/06-navigation/screens/CategoryScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/06-navigation/screens/CategoryScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/06-navigation/screens/MealsOverviewScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/06-navigation/screens/MealsOverviewScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/06-navigation/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/06-navigation/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/06-navigation/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/code/06-navigation/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/06-navigation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/code/06-navigation/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
