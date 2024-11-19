@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46213734-957c-4a4a-9a9a-825a17417435" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/06-navigation/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/06-navigation/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/06-navigation/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/code/06-navigation/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/06-navigation/components/MealItem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/06-navigation/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/code/06-navigation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/code/06-navigation/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/06-navigation/screens/MealsDetailScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/06-navigation/screens/MealsDetailScreen.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +71,7 @@
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;07-redux-context&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;E:/MUSASAYAR ALL PROJECTS/RNCourse/code/04-deep-real-app/fonts&quot;,

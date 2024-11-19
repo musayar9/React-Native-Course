@@ -5,9 +5,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MealsOverviewScreen from "./screens/MealsOverviewScreen";
 import MealsDetailScreen from "./screens/MealsDetailScreen";
-import { createDrawerNavigator } from "@react-navigation/drawer ";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 import FavoriteScreen from "./screens/FavoriteScreen";
- import { Ionicons } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
+import FavoriteContextProvider from "./store/context/favorites-context";
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -38,7 +39,6 @@ function DrawerNavigator() {
         name="Favorites"
         component={FavoriteScreen}
         options={{
-  
           drawerIcon: ({ color, size }) => (
             <Ionicons name="star" color={color} size={size} />
           ),
@@ -51,40 +51,42 @@ function DrawerNavigator() {
 export default function App() {
   return (
     <>
-      <StatusBar style="dark" />
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            headerShown: true,
-            headerStyle: { backgroundColor: "#351401" },
-            headerTintColor: "#fff",
-            contentStyle: { backgroundColor: "#3f2f25" },
-          }}
-        >
-          <Stack.Screen
-            name="Drawer"
-            component={DrawerNavigator}
-            options={{
-              title: "All Categories",
-              headerShown: false,
+      <StatusBar style="light" />
+      <FavoriteContextProvider>
+        <NavigationContainer>
+          <Stack.Navigator
+            screenOptions={{
+              headerShown: true,
+              headerStyle: { backgroundColor: "#351401" },
+              headerTintColor: "#fff",
+              contentStyle: { backgroundColor: "#3f2f25" },
             }}
-          />
-          <Stack.Screen
-            name="MealsOverview"
-            component={MealsOverviewScreen}
-            // options={({ route, navigation }) => {
-            //   const catId = route.params.categoryId;
-            //   return {
-            //     title: catId,
-            //   };
-            // }}
-          />
-          <Stack.Screen
-            name="MealsDetailScreen"
-            component={MealsDetailScreen}
-          />
-        </Stack.Navigator>
-      </NavigationContainer>
+          >
+            <Stack.Screen
+              name="Drawer"
+              component={DrawerNavigator}
+              options={{
+                title: "All Categories",
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="MealsOverview"
+              component={MealsOverviewScreen}
+              // options={({ route, navigation }) => {
+              //   const catId = route.params.categoryId;
+              //   return {
+              //     title: catId,
+              //   };
+              // }}
+            />
+            <Stack.Screen
+              name="MealsDetailScreens"
+              component={MealsDetailScreen}
+            />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </FavoriteContextProvider>
     </>
   );
 }
@@ -95,5 +97,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    zIndex: "1",
   },
 });

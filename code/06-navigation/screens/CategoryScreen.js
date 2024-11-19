@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 import React from "react";
 import { CATEGORIES } from "../data/dummy-data";
 import CategoryGridTitle from "../components/CategoryGridTitle";
@@ -7,7 +7,7 @@ const CategoryScreen = ({ navigation }) => {
   const RenderCategoryItem = ({ title, color, id }) => {
     const pressHandler = () => {
       navigation.navigate("MealsOverview", {
-      categoryId:id
+        categoryId: id,
       });
     };
 
@@ -22,7 +22,11 @@ const CategoryScreen = ({ navigation }) => {
         data={CATEGORIES}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <RenderCategoryItem title={item.title} color={item.color} id={item.id} />
+          <RenderCategoryItem
+            title={item.title}
+            color={item.color}
+            id={item.id}
+          />
         )}
         numColumns={2}
       />
