@@ -17,8 +17,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  textStatus:{
-  color: "#fff",
-  fontSize:48
-  }
+  textStatus: {
+    color: "#fff",
+    fontSize: 48,
+  },
 });
