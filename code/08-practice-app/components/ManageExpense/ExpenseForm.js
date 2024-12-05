@@ -1,4 +1,4 @@
-import { Alert, StyleSheet, Text, View } from "react-native";
+import { Alert, ScrollView, StyleSheet, Text, View } from "react-native";
 import React, { useContext, useState } from "react";
 import Input from "./Input";
 import Button from "../UI/Button";
@@ -31,8 +31,6 @@ const ExpenseForm = ({
     },
   });
 
-  console.log(inputs.amount, "amount");
-  console.log("editdata", editData);
   function inputChangeHandler(inputIdentifier, enteredValue) {
     setInputs((curInputs) => {
       return {
@@ -84,7 +82,11 @@ const ExpenseForm = ({
           invalid={!inputs.amount.isValid}
           textInputConfig={{
             keyboardType: "decimal-pad",
-            onChangeText: inputChangeHandler.bind(this, "amount"),
+            // onChangeText: inputChangeHandler.bind(this, "amount"),
+            onChangeText: (text) => {
+              const updatedText = text.replace(",", "."); // Virgülü noktaya çevir
+              inputChangeHandler("amount", updatedText);
+            },
             value: inputs.amount.value,
           }}
         />
@@ -131,6 +133,7 @@ const ExpenseForm = ({
 export default ExpenseForm;
 
 const styles = StyleSheet.create({
+  container: { flex: 1 },
   form: {
     marginTop: 40,
   },
@@ -146,15 +149,15 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  errorText:{
-  backgroundColor:GlobalStyles.colors.error500,
-  color:"#fff",
-  padding:8,
-  borderRadius:8,
-  textAlign:"center",
-  margin:8
+  errorText: {
+    backgroundColor: GlobalStyles.colors.error500,
+    color: "#fff",
+    padding: 8,
+    borderRadius: 8,
+    textAlign: "center",
+    margin: 8,
   },
-  
+
   rowInput: {
     flex: 1,
   },

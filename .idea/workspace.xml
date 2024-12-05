@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="46213734-957c-4a4a-9a9a-825a17417435" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/code/06-navigation/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/06-navigation/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/06-navigation/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/code/06-navigation/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/06-navigation/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/code/06-navigation/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/08-practice-app/components/ExpensesOutput/ExpenseItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/08-practice-app/components/ExpensesOutput/ExpenseItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/08-practice-app/components/ManageExpense/ExpenseForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/08-practice-app/components/ManageExpense/ExpenseForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/08-practice-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/code/08-practice-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/08-practice-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/code/08-practice-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/08-practice-app/screens/ManageExpense.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/08-practice-app/screens/ManageExpense.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/08-practice-app/screens/RecentExpenses.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/08-practice-app/screens/RecentExpenses.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/08-practice-app/store/expenses-context.js" beforeDir="false" afterPath="$PROJECT_DIR$/code/08-practice-app/store/expenses-context.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +83,7 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\ISA\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }

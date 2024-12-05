@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   textBase: { color: GlobalStyles.colors.primary50 },
   description: { fontSize: 16, marginBottom: 4, fontWeight: "bold" },
   amountContainer: {
-    paddingHorizontal: 12,
+    paddingHorizontal: 8,
     paddingVertical: 4,
     backgroundColor: "white",
     justifyContent: "center",
